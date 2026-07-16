@@ -1,0 +1,18 @@
+/* Additional artwork is used as editorial texture throughout the site. */
+.song-grid article { overflow: hidden; background-position: center; background-size: cover; }
+.song-grid article::before { content: ''; position: absolute; inset: 0; background: #f7f7e6dd; transition: background .3s; }
+.song-grid article:hover::before { background: #f7f7e6bb; }
+.song-grid article > * { position: relative; z-index: 1; }
+.song-grid article:nth-child(1) { background-image: url('assets/costumes/stage-v2.png'); background-position: 78% 18%; }
+.song-grid article:nth-child(2) { background-image: url('assets/gallery/hydrangea-closeup.png'); background-position: 84% 37%; }
+.song-grid article:nth-child(3) { background-image: url('assets/costumes/summer-stage-v2.png'); background-position: 82% 15%; }
+.video-placeholder { position: relative; overflow: hidden; background: linear-gradient(90deg,#2d513dcc,#65885577), url('assets/gallery/hydrangea-steps.png') center 42%/cover; }
+.video-placeholder::after { content: '✦'; position: absolute; right: 12%; font-size: 130px; color: #fff5ae66; }
+.world .map { background: linear-gradient(125deg,#416c52a6,#a5c48666), url('assets/gallery/hydrangea-steps.png') center 48%/cover; }
+.world .map:before { color: #fff9be99; }
+.friends { background: linear-gradient(#fffdf6e8,#fffdf6e8), url('assets/gallery/hydrangea-closeup.png') center 38%/cover; }
+.friend-grid .recruit { background: #fffdf6dd; }
+.goods .suzuri-card { background: linear-gradient(90deg,#4a653ee8,#4a653ebd), url('assets/gallery/hydrangea-walk.png') 73% 45%/cover; }
+.fan { background: linear-gradient(140deg,#526e46bc,#b8cf8db8), url('assets/gallery/hydrangea-closeup.png') center/cover; color: #fff; }
+.fan .overline,.fan h2 em { color: #fff2a9; }
+.fan span { background: #fffdf6df; }

@@ -1,0 +1,25 @@
+.song-button span {
+  transition: 0.25s;
+}
+
+.song-button.is-playing span {
+  background: #788d4a;
+  color: #fff;
+  border-color: #788d4a;
+  animation: pulse 0.7s ease-in-out infinite alternate;
+}
+
+.song-message {
+  height: 25px;
+  margin: 9px 0 0 !important;
+  font-size: 10px !important;
+  color: #82905c !important;
+  letter-spacing: 0.04em;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(1.14);
+    box-shadow: 0 0 0 8px #b7c88b55;
+  }
+}

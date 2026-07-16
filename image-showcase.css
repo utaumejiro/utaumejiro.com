@@ -1,0 +1,11 @@
+.hero { background-image: linear-gradient(90deg, #163b2bbb, #315b3544 70%), url('assets/gallery/hydrangea-walk.png'); background-position: center 48%; }
+.hero-character { display: none; }
+.costume-grid { grid-template-columns: repeat(6, 1fr); }
+.costume-card img { object-position: center top; }
+.masonry { grid-template-columns: repeat(3, 1fr); grid-template-rows: 250px 250px; }
+.masonry .scene img { object-fit: cover; mix-blend-mode: normal; }
+.masonry .tall.scene { grid-row: span 2; }
+.masonry .tall.scene img { object-fit: cover; background: none; }
+.masonry figure:not(.scene) img { object-fit: contain; background: #edf0d9; }
+@media (max-width: 900px) { .costume-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .costume-grid { grid-template-columns: repeat(2, 1fr); }.masonry { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 180px 180px; }.masonry .tall.scene { grid-row: span 2; } }
