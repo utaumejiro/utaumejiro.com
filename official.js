@@ -53,7 +53,7 @@ document.querySelectorAll('.play').forEach((button) => {
 const musicHeading = document.querySelector('.music .title-center');
 if (musicHeading) musicHeading.insertAdjacentHTML('beforeend', '<a class="platform-link" href="https://suno.com/@utau_mejiro" target="_blank" rel="noopener noreferrer">Suno で楽曲を聴く ↗</a>');
 const goodsGrid = document.querySelector('.goods-grid');
-if (goodsGrid) goodsGrid.innerHTML = '<article class="suzuri-card"><i>🛍</i><div><h3>SUZURI のメジロちゃんグッズ</h3><p>メジロちゃんのグッズは、SUZURIのショップでご覧いただけます。<br>新しいアイテムも、ここからチェックしてね。</p></div><a href="https://suzuri.jp/utau_mejiro" target="_blank" rel="noopener noreferrer">SUZURI ショップへ ↗</a></article>';
+if (goodsGrid) goodsGrid.innerHTML = '<article class="suzuri-card"><i>🛍</i><div><h3>SUZURI のメジロちゃんグッズ</h3><p>メジロちゃんのグッズは、SUZURIのショップでご覧いただけます。<br>新しいアイテムも、ここからチェックしてね。</p></div><a href="https://suzuri.jp/utau_mejiro" target="_blank" rel="noopener noreferrer">SUZURI ショップへ ↗</a></article><article class="stamp-card"><i>💬</i><div><p class="card-label">NOW ON SALE</p><h3>メジロちゃん LINEスタンプ</h3><p>森から届く、やさしいひとこと。メジロちゃんのLINEスタンプを販売中です。</p></div><a href="https://store.line.me/stickershop" target="_blank" rel="noopener noreferrer">LINE STOREへ ↗</a></article>';
 
 const worldSection = document.querySelector('.world');
 if (worldSection) worldSection.insertAdjacentHTML('beforebegin', `<section class="schedule" id="schedule"><div class="schedule-inner"><div><p class="overline">SCHEDULE</p><h2>出演予定</h2></div><div class="schedule-list"><article class="schedule-item"><time>2026年7月20日</time><div><b>新しい盆踊りの音　第二回</b><span>出演予定</span></div></article><article class="schedule-item"><time>2026年8月18日・19日<br>24日・25日のいずれか</time><div><b>サマテイ</b><span>出演予定</span></div></article></div></div></section>`);
