@@ -1,0 +1,20 @@
+.rin-rights {
+  max-width: 850px;
+  margin: 26px auto 0;
+  padding: 22px 24px;
+  border: 1px solid #d8dcbf;
+  background: #fffdf6;
+  text-align: left;
+}
+
+.rin-rights h3 {
+  margin: 0 0 12px;
+  font: 19px var(--serif);
+  color: #49643c;
+}
+
+.rin-rights p {
+  max-width: none;
+  margin: 8px 0;
+  font-size: 11px;
+}
