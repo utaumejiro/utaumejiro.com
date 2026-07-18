@@ -59,7 +59,7 @@ const worldSection = document.querySelector('.world');
 if (worldSection) worldSection.insertAdjacentHTML('beforebegin', `<section class="schedule" id="schedule"><div class="schedule-inner"><div><p class="overline">SCHEDULE</p><h2>出演予定</h2></div><div class="schedule-list"><article class="schedule-item"><time>2026年7月20日</time><div><b>新しい盆踊りの音　第二回</b><span>出演予定</span></div></article><article class="schedule-item"><time>2026年8月18日・19日<br>24日・25日のいずれか</time><div><b>サマテイ</b><span>出演予定</span></div></article></div></div></section>`);
 
 const friendGrid = document.querySelector('.friend-grid');
-if (friendGrid) friendGrid.innerHTML = '<article class="future recruit"><i>＋</i><h3>森のおともだち、募集中</h3><p>これからメジロちゃんと出会う、素敵な仲間たちを順番にご紹介していきます。</p></article><article class="friend-banner"><img src="https://momuandteasteam.com/linkbanners/official-banner-square.jpg" alt="Momu & Tea Team 公式バナー"></article>';
+if (friendGrid) friendGrid.innerHTML = '<article class="future recruit"><i>＋</i><h3>森のおともだち、募集中</h3><p>これからメジロちゃんと出会う、素敵な仲間たちを順番にご紹介していきます。</p></article><article class="friend-banner"><a href="https://momuandteasteam.com/" target="_blank" rel="noopener noreferrer"><img src="https://momuandteasteam.com/linkbanners/official-banner-square.jpg" alt="Momu & Tea Team 公式サイトを開く"></a></article>';
 
 document.querySelector('.news')?.remove();
 document.querySelectorAll('a[href="#news"]').forEach((link) => link.remove());
