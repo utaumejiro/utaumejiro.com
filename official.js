@@ -37,7 +37,7 @@ const places = { '紫陽花の小道':'雨あがりには、紫陽花の色が�
 document.querySelectorAll('.map button').forEach((button) => button.addEventListener('click', () => document.querySelector('#world-message').textContent = places[button.dataset.world]));
 
 const sunoProfile = 'https://suno.com/@utau_mejiro';
-const featuredSongs = ['ことり会議', '若葉色モノローグ', 'さえずりのない夜', 'メジロ'];
+const featuredSongs = ['ことり会議', '若葉色モノローグ', 'さえずりのない夜', 'めじろ音頭〜チュルッと夏まつり！〜'];
 document.querySelectorAll('.song-grid article').forEach((card, index) => {
   if (featuredSongs[index]) card.querySelector('h3').textContent = featuredSongs[index];
 });
