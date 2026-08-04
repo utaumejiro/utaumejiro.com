@@ -13,6 +13,12 @@
   color: #49643c;
 }
 
+.rin-rights h4 {
+  margin: 18px 0 8px;
+  font: 15px var(--serif);
+  color: #587047;
+}
+
 .rin-rights p {
   max-width: none;
   margin: 8px 0;
