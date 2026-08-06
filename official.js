@@ -3,7 +3,7 @@ const modalImage = document.querySelector('#modal-image');
 const modalTitle = document.querySelector('#modal-title');
 const modalCopy = document.querySelector('#modal-copy');
 
-const openCostume = (card) => {
+document.querySelectorAll('.costume-card').forEach((card) => card.addEventListener('click', () => {
   modalTitle.textContent = card.dataset.title;
   if (card.dataset.image) {
     modalImage.src = card.dataset.image;
@@ -14,18 +14,8 @@ const openCostume = (card) => {
     modalCopy.textContent = 'この衣装の設定画は、ただいま準備中です。公開を楽しみにしていてね。';
   }
   modal.showModal();
-};
-document.addEventListener('click', (event) => {
-  const card = event.target.closest('.costume-card');
-  if (card) openCostume(card);
-});
+}));
 document.querySelector('.close').addEventListener('click', () => modal.close());
-
-const additionalCostumes = [
-  ['守護鳥の祝福', 'assets/gallery/guardian-of-the-forest.png'], ['ネラダイナーの冒険', 'assets/gallery/nera-diner-guardian.png'], ['花かんむりの午後', 'assets/gallery/flower-crown-friends.png'], ['チェリーパイ・タイム', 'assets/gallery/nera-diner-cherry-pie.png'], ['クリームソーダをどうぞ', 'assets/gallery/nera-diner-cream-soda.png'], ['夏の海辺で', 'assets/gallery/summer-jackpot031.jpeg'], ['るーと森の約束', 'assets/gallery/ruu-mejiro-forest.jpeg'], ['浴衣スタイル・スケッチ', 'assets/gallery/yukata-sketch.png'], ['羽根衣装・スケッチ', 'assets/gallery/forest-dress-sketch.png'], ['夏のステージ・スケッチ', 'assets/gallery/summer-stage-sketch.png'], ['乾杯のひととき', 'assets/gallery/momu-collaboration.png'], ['ワッフルの時間', 'assets/gallery/waffle-with-friends.png'], ['雨の日のよりみち', 'assets/gallery/rainy-day-friends.png'], ['花屋さんの午後', 'assets/gallery/flower-shop-friends.png'], ['すいか日和', 'assets/gallery/watermelon-friends.png'], ['もんじゃ焼きパーティー', 'assets/gallery/monja-friends.png'], ['ひまわりの小道', 'assets/gallery/sunflower-friends.png'], ['海辺のおもちちゃん', 'assets/gallery/beach-mochi.png']
-];
-const costumeGrid = document.querySelector('.costume-grid');
-if (costumeGrid) costumeGrid.insertAdjacentHTML('beforeend', additionalCostumes.map(([title, image]) => `<button class="costume-card" data-title="${title}" data-image="${image}"><img src="${image}" alt="${title}"><span>✦ ${title}</span></button>`).join(''));
 
 function chime() {
   const Ctx = window.AudioContext || window.webkitAudioContext;
