@@ -1,6 +1,6 @@
 .hero { background-image: linear-gradient(90deg, #163b2bbb, #315b3544 70%), url('assets/gallery/hydrangea-walk.png'); background-position: center 48%; }
 .hero-character { display: none; }
-.costume-grid { grid-template-columns: repeat(6, 1fr); }
+.costume-grid { grid-template-columns: repeat(4, 1fr); }
 .costume-card img { object-position: center top; }
 .masonry { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(9, 250px); }
 .masonry .scene img { object-fit: cover; mix-blend-mode: normal; }
