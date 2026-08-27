@@ -1,5 +1,7 @@
 .platform-link, .suzuri-card a { display: inline-block; color: #fff; background: #527a3e; border-radius: 999px; padding: 9px 18px; font-size: 11px; text-decoration: none; letter-spacing: .08em; }
 .music .platform-link { margin-top: 14px; }
+.official-movie { text-decoration: none; transition: transform .2s ease, filter .2s ease; }
+.official-movie:hover { transform: translateY(-3px); filter: brightness(1.07); }
 .goods .suzuri-card, .goods .stamp-card { grid-column: 1 / -1; display: grid; grid-template-columns: 105px 1fr auto; gap: 25px; align-items: center; text-align: left; padding: 28px 40px; background: #ffffff1e; }
 .goods .suzuri-card i, .goods .stamp-card i { text-align: center; font-size: 50px; }
 .goods .suzuri-card h3, .goods .stamp-card h3 { margin: 0 0 5px; }
