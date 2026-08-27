@@ -3,9 +3,14 @@
 .costume-grid { grid-template-columns: repeat(6, 1fr); }
 .costume-card img { object-position: center top; }
 .masonry { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(9, 250px); }
+.gallery-guide { max-width: 1100px; margin: -18px auto 22px; color: #71835b; text-align: right; font-size: 11px; }
+.masonry figure { cursor: zoom-in; box-shadow: 0 7px 18px #42563a18; }
+.gallery-modal { width: min(94vw, 920px); max-width: 920px; padding: 32px; }
+.gallery-modal img { width: auto; max-width: 100%; max-height: 76vh; object-fit: contain; mix-blend-mode: normal; }
+.gallery-modal p { margin-bottom: 0; color: #71835b; }
 .masonry .scene img { object-fit: cover; mix-blend-mode: normal; }
 .masonry .tall.scene { grid-row: span 2; }
 .masonry .tall.scene img { object-fit: cover; background: none; }
 .masonry figure:not(.scene) img { object-fit: contain; background: #edf0d9; }
 @media (max-width: 900px) { .costume-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 760px) { .costume-grid { grid-template-columns: repeat(2, 1fr); }.masonry { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(13, 180px); }.masonry .tall.scene { grid-row: span 2; } }
+@media (max-width: 760px) { .costume-grid { grid-template-columns: repeat(2, 1fr); }.gallery-guide { margin: -7px 0 17px; text-align: left; }.masonry { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(13, 180px); }.masonry .tall.scene { grid-row: span 2; }.gallery-modal { padding: 24px 16px; }.gallery-modal img { max-height: 70vh; } }

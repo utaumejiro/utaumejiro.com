@@ -4,6 +4,7 @@ const modalTitle = document.querySelector('#modal-title');
 const modalCopy = document.querySelector('#modal-copy');
 
 document.querySelectorAll('.costume-card').forEach((card) => card.addEventListener('click', () => {
+  modal.classList.remove('gallery-modal');
   modalTitle.textContent = card.dataset.title;
   if (card.dataset.image) {
     modalImage.src = card.dataset.image;
@@ -16,6 +17,25 @@ document.querySelectorAll('.costume-card').forEach((card) => card.addEventListen
   modal.showModal();
 }));
 document.querySelector('.close').addEventListener('click', () => modal.close());
+
+const galleryHeader = document.querySelector('.gallery-head');
+if (galleryHeader) galleryHeader.insertAdjacentHTML('afterend', '<p class="gallery-guide">気になる作品をタップすると、大きくご覧いただけます。</p>');
+document.addEventListener('click', (event) => {
+  const item = event.target.closest('.masonry figure');
+  if (!item) return;
+  const image = item.querySelector('img');
+  const title = item.querySelector('figcaption b')?.textContent || 'メジロちゃんの作品';
+  modal.classList.add('gallery-modal');
+  modalTitle.textContent = title;
+  modalImage.src = image.currentSrc || image.src;
+  modalImage.alt = image.alt;
+  modalImage.hidden = false;
+  modalCopy.textContent = 'タップでもう一度閉じることができます。';
+  modal.showModal();
+});
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) modal.close();
+});
 
 function chime() {
   const Ctx = window.AudioContext || window.webkitAudioContext;
