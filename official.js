@@ -21,7 +21,7 @@ document.querySelector('.close').addEventListener('click', () => modal.close());
 const galleryHeader = document.querySelector('.gallery-head');
 if (galleryHeader) galleryHeader.insertAdjacentHTML('afterend', '<p class="gallery-guide">気になる作品をタップすると、大きくご覧いただけます。</p>');
 document.addEventListener('click', (event) => {
-  const item = event.target.closest('.masonry figure');
+  const item = event.target.closest('.gallery-scenes figure');
   if (!item) return;
   const image = item.querySelector('img');
   const title = item.querySelector('figcaption b')?.textContent || 'メジロちゃんの作品';
@@ -89,6 +89,31 @@ if (scheduleList) scheduleList.insertAdjacentHTML('beforeend', '<article class="
 
 const gallery = document.querySelector('.masonry');
 if (gallery) gallery.insertAdjacentHTML('beforeend', '<figure class="scene"><img src="assets/gallery/waffle-with-friends.png" alt="ワッフルを楽しむメジロちゃんとおともだち"><figcaption><b>ワッフルの時間</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/rainy-day-friends.png" alt="雨宿りするメジロちゃんとおともだち"><figcaption><b>雨の日のよりみち</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/flower-shop-friends.png" alt="花屋さんのメジロちゃんとおともだち"><figcaption><b>花屋さんの午後</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/watermelon-friends.png" alt="スイカを楽しむメジロちゃんとおともだち"><figcaption><b>すいか日和</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/monja-friends.png" alt="もんじゃ焼きを楽しむメジロちゃんとおともだち"><figcaption><b>もんじゃ焼きパーティー</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/sunflower-friends.png" alt="ひまわり畑のメジロちゃんとおともだち"><figcaption><b>ひまわりの小道</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/beach-mochi.png" alt="海辺でおもちちゃんと遊ぶメジロちゃん"><figcaption><b>海辺のおもちちゃん</b><span>2026.08.06</span></figcaption></figure>');
+
+if (gallery) {
+  const scenes = [
+    { title: '紫陽花の季節', copy: '雨あがりの小道で、ゆっくり深呼吸。', works: ['紫陽花の小道', '白い紫陽花', 'あじさい散歩', '紫陽花浴衣', '浴衣スタイル・スケッチ'] },
+    { title: '森のひみつ', copy: '羽根のきらめきと、守護鳥に出会う物語。', works: ['森の歌姫', '守護鳥の祝福', 'ネラダイナーの冒険', '花かんむりの午後', '羽根衣装・スケッチ'] },
+    { title: '夏のきらめき', copy: '海、ひまわり、そして甘いクリームソーダ。', works: ['夏のステージ', 'チェリーパイ・タイム', 'クリームソーダをどうぞ', '夏の海辺で', 'すいか日和', 'ひまわりの小道', '海辺のおもちちゃん', '夏のステージ・スケッチ'] },
+    { title: 'おともだちとの時間', copy: 'おしゃべりして、笑って、今日も思い出が増えていく。', works: ['るーと森の約束', '乾杯のひととき', 'ワッフルの時間', '雨の日のよりみち', '花屋さんの午後', 'もんじゃ焼きパーティー'] },
+  ];
+  const figures = [...gallery.querySelectorAll('figure')];
+  const byTitle = new Map(figures.map((figure) => [figure.querySelector('figcaption b')?.textContent, figure]));
+  const collection = document.createElement('div');
+  collection.className = 'gallery-scenes';
+  scenes.forEach((scene, index) => {
+    const section = document.createElement('section');
+    section.className = 'gallery-scene';
+    section.innerHTML = `<div class="scene-heading"><span>SCENE ${String(index + 1).padStart(2, '0')}</span><div><h3>${scene.title}</h3><p>${scene.copy}</p></div></div><div class="scene-grid"></div>`;
+    const grid = section.querySelector('.scene-grid');
+    scene.works.forEach((title) => { const figure = byTitle.get(title); if (figure) grid.append(figure); });
+    if (grid.children.length) collection.append(section);
+  });
+  gallery.replaceWith(collection);
+  document.querySelector('.gallery-head .filters')?.replaceChildren(Object.assign(document.createElement('span'), { textContent: 'SCENE ALBUM' }));
+  const galleryGuide = document.querySelector('.gallery-guide');
+  if (galleryGuide) galleryGuide.textContent = '季節や場面ごとのアルバムです。気になる作品をタップすると、大きくご覧いただけます。';
+}
 
 const friendGrid = document.querySelector('.friend-grid');
 if (friendGrid) friendGrid.innerHTML = '<article class="future recruit"><i>＋</i><h3>森のおともだち、募集中</h3><p>これからメジロちゃんと出会う、素敵な仲間たちを順番にご紹介していきます。</p></article><article class="friend-banner"><a href="https://momuandteasteam.com/" target="_blank" rel="noopener noreferrer"><img src="https://momuandteasteam.com/linkbanners/official-banner-square.jpg" alt="Momu & Tea Team 公式サイトを開く"></a></article><article class="friend-banner jackpot-banner"><a href="https://jackpot031.studio.site" target="_blank" rel="noopener noreferrer"><img src="assets/friends/jackpot031-banner.jpg" alt="JACKPOT031 Official Site を開く"></a></article><article class="friend-banner chronoconnex-banner"><a href="https://www.mokele-mbembe.jp/" target="_blank" rel="noopener noreferrer"><img src="assets/friends/chronoconnex-banner.png" alt="Chronoconnex 公式サイトを開く"></a></article><article class="friend-banner jayzaimusic-banner"><a href="https://lit.link/jayzaimusic" target="_blank" rel="noopener noreferrer"><img src="assets/friends/jayzaimusic-banner.jpg" alt="JayZaiMusic を開く"></a></article><article class="friend-banner elemayu-banner"><a href="https://elemayu-official.netlify.app/" target="_blank" rel="noopener noreferrer"><img src="assets/friends/elemayu-banner.jpg" alt="ELE MAYU 公式サイトを開く"></a></article>';
