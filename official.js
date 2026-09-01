@@ -109,19 +109,29 @@ if (gallery) {
     scene.works.forEach((title) => { const figure = byTitle.get(title); if (figure) grid.append(figure); });
     if (grid.children.length) collection.append(section);
   });
-  const characterSheets = [
-    '森の妖精・通常衣装', '若葉浴衣', 'サマー衣装', 'ステージ衣装', 'サマーフェアリーステージ', '白花ワンピース', '白レースワンピース', 'レースワンピース', 'きぐるみパジャマ', 'アイドル衣装（白）',
-    'チャイナミニワンピース', 'アイドル衣装（モノトーン）', 'セーラーアイドル衣装', 'フラワーワンピース', 'いちごアイドル衣装', '紫陽花浴衣', 'いちごケーキワンピース', 'ストライプワンピース', 'サマテイコーデ', '黒トップスコーデ',
-    'サマーフェアリーステージ（SD）', 'ネラダイナー衣装', 'レース浴衣', '紫陽花浴衣（ネイビー帯）', '麻の葉浴衣', 'Rinとおそろいの街歩きコーデ', '着ぐるみ衣装', '星読みの魔法使い', 'かぼちゃの森の妖精', '森のキノコ魔女',
-    '鳥かごゴシック姫', 'ハロウィンコーデ', '月夜のからくり人形', '深海クラゲゴースト', 'キャンディ魔女', 'ハロウィン白おばけ', 'ねこゴシック', 'かぼちゃの森の妖精・設定', '鳥かごゴシック姫・設定', '着ぐるみ衣装・設定',
+  const characterSheetGroups = [
+    { title: '基本・季節の装い', copy: 'メジロちゃんらしさを彩る、定番から季節の装いまで。', sheets: ['森の妖精・通常衣装', '若葉浴衣', 'サマー衣装', 'ステージ衣装', 'サマーフェアリーステージ', '白花ワンピース', '白レースワンピース', 'レースワンピース'] },
+    { title: '日常・おでかけコーデ', copy: 'おさんぽ、カフェ、ステージへ。日々のとっておき。', sheets: ['きぐるみパジャマ', 'アイドル衣装（白）', 'チャイナミニワンピース', 'アイドル衣装（モノトーン）', 'セーラーアイドル衣装', 'フラワーワンピース', 'いちごアイドル衣装', '紫陽花浴衣', 'いちごケーキワンピース', 'ストライプワンピース', 'サマテイコーデ', '黒トップスコーデ'] },
+    { title: '夏・イベント衣装', copy: '夏の歌とお祭りを彩る、軽やかな衣装たち。', sheets: ['サマーフェアリーステージ（SD）', 'ネラダイナー衣装', 'レース浴衣', '紫陽花浴衣（ネイビー帯）', '麻の葉浴衣'] },
+    { title: '物語の衣装', copy: '森の魔法と冒険へ連れていく、ファンタジーコレクション。', sheets: ['Rinとおそろいの街歩きコーデ', '着ぐるみ衣装', '星読みの魔法使い', 'かぼちゃの森の妖精', '森のキノコ魔女', '鳥かごゴシック姫'] },
+    { title: 'ハロウィン・特別設定', copy: '秋の夜の装いと、細部まで楽しむ設定シート。', sheets: ['ハロウィンコーデ', '月夜のからくり人形', '深海クラゲゴースト', 'キャンディ魔女', 'ハロウィン白おばけ', 'ねこゴシック', 'かぼちゃの森の妖精・設定', '鳥かごゴシック姫・設定', '着ぐるみ衣装・設定'] },
   ];
   const sheetAlbum = document.createElement('section');
   sheetAlbum.className = 'gallery-scene character-sheet-album';
-  sheetAlbum.innerHTML = '<div class="scene-heading"><span>SCENE 05</span><div><h3>キャラクターシート・アルバム</h3><p>衣装やデザインの細部まで楽しめる、メジロちゃんの設定画集。</p></div></div><div class="character-sheet-grid"></div>';
-  const sheetGrid = sheetAlbum.querySelector('.character-sheet-grid');
-  characterSheets.forEach((title, index) => {
-    const number = String(index + 1).padStart(2, '0');
-    sheetGrid.insertAdjacentHTML('beforeend', `<figure class="character-sheet"><img src="assets/character-sheets/sheet-${number}.png" alt="${title}のキャラクターシート" loading="lazy"><figcaption><b>${title}</b><span>sheet ${number}</span></figcaption></figure>`);
+  sheetAlbum.innerHTML = '<div class="scene-heading"><span>SCENE 05</span><div><h3>キャラクターシート・アルバム</h3><p>衣装やデザインの細部まで楽しめる、メジロちゃんの設定画集。</p></div></div><div class="character-sheet-groups"></div>';
+  const sheetGroups = sheetAlbum.querySelector('.character-sheet-groups');
+  let sheetIndex = 0;
+  characterSheetGroups.forEach(({ title, copy, sheets }) => {
+    const group = document.createElement('section');
+    group.className = 'character-sheet-group';
+    group.innerHTML = `<header><h4>${title}</h4><p>${copy}</p></header><div class="character-sheet-grid"></div>`;
+    const sheetGrid = group.querySelector('.character-sheet-grid');
+    sheets.forEach((sheetTitle) => {
+      sheetIndex += 1;
+      const number = String(sheetIndex).padStart(2, '0');
+      sheetGrid.insertAdjacentHTML('beforeend', `<figure class="character-sheet"><img src="assets/character-sheets/sheet-${number}.png" alt="${sheetTitle}のキャラクターシート" loading="lazy"><figcaption><b>${sheetTitle}</b><span>sheet ${number}</span></figcaption></figure>`);
+    });
+    sheetGroups.append(group);
   });
   collection.append(sheetAlbum);
   gallery.replaceWith(collection);
