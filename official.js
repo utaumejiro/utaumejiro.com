@@ -76,6 +76,9 @@ if (musicHeading) musicHeading.insertAdjacentHTML('beforeend', '<a class="platfo
 const goodsGrid = document.querySelector('.goods-grid');
 if (goodsGrid) goodsGrid.innerHTML = '<article class="suzuri-card"><i>🛍</i><div><h3>SUZURI のメジロちゃんグッズ</h3><p>メジロちゃんのグッズは、SUZURIのショップでご覧いただけます。<br>新しいアイテムも、ここからチェックしてね。</p></div><a href="https://suzuri.jp/utau_mejiro" target="_blank" rel="noopener noreferrer">SUZURI ショップへ ↗</a></article><article class="stamp-card"><i>💬</i><div><p class="card-label">NOW ON SALE</p><h3>メジロちゃん LINEスタンプ</h3><p>森から届く、やさしいひとこと。メジロちゃんのLINEスタンプを販売中です。</p></div><a href="https://store.line.me/stickershop/product/35247520/ja" target="_blank" rel="noopener noreferrer">LINEスタンプを購入 ↗</a></article>';
 
+const entrustedCharacterNote = document.querySelector('.rin-rights p:last-child');
+if (entrustedCharacterNote) entrustedCharacterNote.insertAdjacentHTML('beforebegin', '<p><strong>Nell（ちびキャラ）</strong><br>権利者：かなめ（X <a href="https://x.com/kaname_mbembe" target="_blank" rel="noopener noreferrer">@kaname_mbembe</a>）<br>公式サイト：<a href="https://www.mokele-mbembe.jp" target="_blank" rel="noopener noreferrer">www.mokele-mbembe.jp</a></p>');
+
 const worldSection = document.querySelector('.world');
 if (worldSection) worldSection.insertAdjacentHTML('beforebegin', `<section class="schedule" id="schedule"><div class="schedule-inner"><div><p class="overline">SCHEDULE</p><h2>出演予定</h2></div><div class="schedule-list"><article class="schedule-item"><time>2026年7月20日　20時から</time><div><b>新しい盆踊りの音　第二回</b><span>出演済み</span></div></article><article class="schedule-item"><time>2026年8月16日　20時から</time><div><b>新しい盆踊りの音　第三回</b><span>出演予定</span></div></article><article class="schedule-item"><time>2026年8月18日・19日<br>24日・25日のいずれか</time><div><b>サマテイ2026 夏とゾンビ〜</b><span>出演予定</span></div></article></div></div></section>`);
 document.querySelectorAll('.schedule-item span').forEach((status) => { status.textContent = '出演済み'; });
