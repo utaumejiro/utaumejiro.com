@@ -79,7 +79,7 @@ if (goodsGrid) goodsGrid.innerHTML = '<article class="suzuri-card"><i>🛍</i><d
 const entrustedCharacterNote = document.querySelector('.rin-rights p:last-child');
 if (entrustedCharacterNote) {
   entrustedCharacterNote.insertAdjacentHTML('beforebegin', '<p><strong>Nell（ちびキャラ）</strong><br>権利者：かなめ（X <a href="https://x.com/kaname_mbembe" target="_blank" rel="noopener noreferrer">@kaname_mbembe</a>）<br>公式サイト：<a href="https://www.mokele-mbembe.jp" target="_blank" rel="noopener noreferrer">www.mokele-mbembe.jp</a></p>');
-  entrustedCharacterNote.insertAdjacentHTML('beforebegin', '<p><strong>お芋シスターズ</strong><br>やきいもちゃん（ちびキャラ）<br>じゃがいもちゃん（ちびキャラ）<br>権利者：夢未話瑠衣子（X <a href="https://x.com/YumimiWa_ruiko" target="_blank" rel="noopener noreferrer">@YumimiWa_ruiko</a>）</p>');
+  entrustedCharacterNote.insertAdjacentHTML('beforebegin', '<p><strong>おいもシスターズ</strong><br>やきいもちゃん（ちびキャラ）<br>じゃがいもちゃん（ちびキャラ）<br>権利者：夢未話瑠衣子（X <a href="https://x.com/YumimiWa_ruiko" target="_blank" rel="noopener noreferrer">@YumimiWa_ruiko</a>）</p>');
 }
 
 const worldSection = document.querySelector('.world');
