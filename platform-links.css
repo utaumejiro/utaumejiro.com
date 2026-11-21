@@ -35,6 +35,7 @@
 .radio-copy { max-width: 520px; }
 .radio-copy h2 { font-size: clamp(40px, 5vw, 62px); }
 .radio-copy > p:not(.overline) { margin: 18px 0 23px; font-size: 16px; line-height: 2; }
+.radio-copy .radio-schedule { margin: 0 0 23px; color: #4f743d; font-weight: 700; }
 .radio-channel-link, .radio-card-action { display: inline-block; border-radius: 999px; background: #527a3e; color: #fff; padding: 10px 19px; text-decoration: none; font-size: 14px; letter-spacing: .05em; }
 .radio-archive { max-width: 1030px; margin: 65px auto 0; padding: clamp(25px, 5vw, 48px); border: 1px solid #d7ddaf; border-radius: 22px; background: #fffef9c9; }
 .radio-archive-heading { display: grid; grid-template-columns: 1fr 150px; gap: 24px; align-items: center; }

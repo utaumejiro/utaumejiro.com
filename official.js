@@ -81,7 +81,7 @@ const musicSection = document.querySelector('.music');
 if (musicSection) musicSection.insertAdjacentHTML('afterend', `<section class="radio section" id="radio" aria-labelledby="radio-title">
   <div class="radio-intro">
     <div class="radio-art radio-art-main"><img src="assets/radio/churutto-radio-cover.png" alt="チュルッとラジオのメジロちゃんイラスト"></div>
-    <div class="radio-copy"><p class="overline">03 — RADIO</p><h2 id="radio-title">チュルッと<br><em>ラジオ</em></h2><p>メジロちゃんが、歌や森のこと、日々の小さなおしゃべりをお届けするYouTubeラジオです。ゆったりした時間を、いっしょに過ごしてね。</p><a class="radio-channel-link" href="${radioChannel}" target="_blank" rel="noopener noreferrer">YouTube チャンネルを開く</a></div>
+    <div class="radio-copy"><p class="overline">03 — RADIO</p><h2 id="radio-title">チュルッと<br><em>ラジオ</em></h2><p>チュルッとラジオは、かなめさんとめじろがパーソナリティのラジオ番組です。<br>毎回ゲストに森のおともだちを迎え、作品に込めた想いや、その人ならではの魅力を楽しく深掘り！<br>聴く人も出演する人も、新しい発見や出会いを楽しめる、あたたかな交流の場を目指しています。</p><p class="radio-schedule">2026年12月1日スタート！<br>毎週1回・約30分の生放送</p><a class="radio-channel-link" href="${radioChannel}" target="_blank" rel="noopener noreferrer">YouTube チャンネルを開く</a></div>
   </div>
   <div class="radio-archive">
     <div class="radio-archive-heading"><div><p class="overline">ARCHIVE</p><h3>過去回アーカイブ</h3><p>各回を新しい順にたどれます。気になる回をYouTubeでお楽しみください。</p></div><div class="radio-art radio-art-small"><img src="assets/radio/churutto-radio-archive.png" alt="チュルッとラジオのアーカイブ用イラスト" loading="lazy"></div></div>
