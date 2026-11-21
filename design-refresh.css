@@ -16,6 +16,7 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
 .hero-buttons a { padding: 9px 15px; font-size: 12px; font-weight: 700; transition: transform .2s, background .2s; }
 .hero-buttons a:hover { transform: translateY(-2px); background: #fff4; }
 .hero-character { right: 8%; filter: drop-shadow(0 18px 24px #102c1a80); }
+.hero-closeup { right: clamp(18px, 4vw, 68px); bottom: 26px; width: min(48vw, 650px); max-width: none; height: min(76vh, 720px); object-fit: cover; object-position: 52% 34%; border: 7px solid #fff9; border-radius: 48% 48% 34% 34%; box-shadow: 0 22px 44px #17382075; }
 .section, .schedule, .rights { width: min(1280px, calc(100% - 32px)); margin: 18px auto; border: 1px solid var(--line); border-radius: 30px; box-shadow: var(--shadow); overflow: hidden; }
 .section { padding: clamp(58px, 8vw, 105px) clamp(24px, 7vw, 92px); }
 .character { grid-template-columns: minmax(260px, .83fr) minmax(0, 1fr); gap: clamp(32px, 7vw, 100px); }
@@ -57,6 +58,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #e5bd47; outline-offs
   .header { height: 62px; } .logo { font-size: 20px; } .header-x { font-size: 11px; }
   .hero { min-height: 720px; padding-top: 62px; } .hero-copy { padding-top: 86px; } .hero-copy::before { inset: 62px 16px 45px; width: auto; }
   .hero-copy > p:not(.overline) { font-size: 15px; } .hero-character { right: -4%; height: 440px; }
+  .hero-closeup { right: 4%; bottom: 16px; width: min(78vw, 440px); height: 430px; object-position: 51% 28%; border-width: 4px; border-radius: 46% 46% 28% 28%; }
   .section, .schedule, .rights, .fan { width: calc(100% - 20px); margin: 10px auto; border-radius: 22px; }
   .character { grid-template-columns: 1fr; } .portrait-wrap { height: 390px; }
   .costume-grid { gap: 10px; } .song-grid, .playlist-grid, .music-video-grid { grid-template-columns: 1fr; }
