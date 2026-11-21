@@ -103,7 +103,7 @@ document.querySelectorAll('.schedule-item span').forEach((status) => { status.te
 const scheduleTitle = document.querySelector('.schedule h2');
 if (scheduleTitle) scheduleTitle.textContent = '出演実績';
 const scheduleList = document.querySelector('.schedule-list');
-if (scheduleList) scheduleList.insertAdjacentHTML('beforeend', '<article class="schedule-item"><time>2026年9月1日</time><div><b>AI MUSIC MEMORY FIREWORKS</b><span>出演済み</span></div></article>');
+if (scheduleList) scheduleList.insertAdjacentHTML('beforeend', '<article class="schedule-item"><time>2026年9月1日</time><div><b>AI MUSIC MEMORY FIREWORKS</b><span>出演済み</span></div></article><article class="schedule-item"><time>2026年10月30日</time><div><b>底辺AI Halloween Night 2026 powered by FLOVA</b><span>出演済み</span></div></article>');
 
 const sectionNumbers = [
   ['.gallery .overline', '04 — GALLERY'],
