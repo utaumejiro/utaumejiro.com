@@ -81,7 +81,7 @@ const musicSection = document.querySelector('.music');
 if (musicSection) musicSection.insertAdjacentHTML('afterend', `<section class="radio section" id="radio" aria-labelledby="radio-title">
   <div class="radio-intro">
     <div class="radio-art radio-art-main"><img src="assets/radio/churutto-radio-cover.png" alt="チュルッとラジオのメジロちゃんイラスト"></div>
-    <div class="radio-copy"><p class="overline">CHURUTTO RADIO</p><h2 id="radio-title">チュルッと<br><em>ラジオ</em></h2><p>メジロちゃんが、歌や森のこと、日々の小さなおしゃべりをお届けするYouTubeラジオです。ゆったりした時間を、いっしょに過ごしてね。</p><a class="radio-channel-link" href="${radioChannel}" target="_blank" rel="noopener noreferrer">YouTube チャンネルを開く</a></div>
+    <div class="radio-copy"><p class="overline">03 — RADIO</p><h2 id="radio-title">チュルッと<br><em>ラジオ</em></h2><p>メジロちゃんが、歌や森のこと、日々の小さなおしゃべりをお届けするYouTubeラジオです。ゆったりした時間を、いっしょに過ごしてね。</p><a class="radio-channel-link" href="${radioChannel}" target="_blank" rel="noopener noreferrer">YouTube チャンネルを開く</a></div>
   </div>
   <div class="radio-archive">
     <div class="radio-archive-heading"><div><p class="overline">ARCHIVE</p><h3>過去回アーカイブ</h3><p>各回を新しい順にたどれます。気になる回をYouTubeでお楽しみください。</p></div><div class="radio-art radio-art-small"><img src="assets/radio/churutto-radio-archive.png" alt="チュルッとラジオのアーカイブ用イラスト" loading="lazy"></div></div>
@@ -109,6 +109,19 @@ const scheduleTitle = document.querySelector('.schedule h2');
 if (scheduleTitle) scheduleTitle.textContent = '出演実績';
 const scheduleList = document.querySelector('.schedule-list');
 if (scheduleList) scheduleList.insertAdjacentHTML('beforeend', '<article class="schedule-item"><time>2026年9月1日</time><div><b>AI MUSIC MEMORY FIREWORKS</b><span>出演済み</span></div></article>');
+
+const sectionNumbers = [
+  ['.gallery .overline', '04 — GALLERY'],
+  ['.goods .overline', '05 — GOODS'],
+  ['.schedule .overline', '06 — SCHEDULE'],
+  ['.world .overline', '07 — WORLD'],
+  ['.friends .overline', '08 — FRIENDS'],
+  ['.fan .overline', '09 — FAN CONTENTS'],
+];
+sectionNumbers.forEach(([selector, label]) => {
+  const overline = document.querySelector(selector);
+  if (overline) overline.textContent = label;
+});
 
 const gallery = document.querySelector('.masonry');
 if (gallery) gallery.insertAdjacentHTML('beforeend', '<figure class="scene"><img src="assets/gallery/waffle-with-friends.png" alt="ワッフルを楽しむメジロちゃんとおともだち"><figcaption><b>ワッフルの時間</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/rainy-day-friends.png" alt="雨宿りするメジロちゃんとおともだち"><figcaption><b>雨の日のよりみち</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/flower-shop-friends.png" alt="花屋さんのメジロちゃんとおともだち"><figcaption><b>花屋さんの午後</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/watermelon-friends.png" alt="スイカを楽しむメジロちゃんとおともだち"><figcaption><b>すいか日和</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/monja-friends.png" alt="もんじゃ焼きを楽しむメジロちゃんとおともだち"><figcaption><b>もんじゃ焼きパーティー</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/sunflower-friends.png" alt="ひまわり畑のメジロちゃんとおともだち"><figcaption><b>ひまわりの小道</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/beach-mochi.png" alt="海辺でおもちちゃんと遊ぶメジロちゃん"><figcaption><b>海辺のおもちちゃん</b><span>2026.08.06</span></figcaption></figure>');
