@@ -26,3 +26,26 @@
 @media(max-width:700px){.schedule{padding:65px 25px}.schedule-inner{grid-template-columns:1fr}.schedule h2{font-size:36px}.schedule-item{grid-template-columns:1fr;gap:3px}}
 @media(max-width:700px){.goods .suzuri-card,.goods .stamp-card{grid-template-columns:1fr;text-align:center;padding:25px}.goods .suzuri-card i,.goods .stamp-card i{text-align:center}}
 @media(max-width:700px){.friend-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.friend-grid .friend-banner{padding:5px}}
+
+.radio { background: linear-gradient(135deg, #fffdf6 0%, #f3f0d3 100%); }
+.radio-intro { max-width: 1030px; margin: 0 auto; display: grid; grid-template-columns: minmax(260px, .83fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 72px); align-items: center; }
+.radio-art { overflow: hidden; border-radius: 26px; box-shadow: 0 18px 38px #5b683020; background: #fffaf0; }
+.radio-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.radio-art-main { aspect-ratio: 1; max-width: 430px; justify-self: center; }
+.radio-copy { max-width: 520px; }
+.radio-copy h2 { font-size: clamp(40px, 5vw, 62px); }
+.radio-copy > p:not(.overline) { margin: 18px 0 23px; font-size: 16px; line-height: 2; }
+.radio-channel-link, .radio-card-action { display: inline-block; border-radius: 999px; background: #527a3e; color: #fff; padding: 10px 19px; text-decoration: none; font-size: 14px; letter-spacing: .05em; }
+.radio-archive { max-width: 1030px; margin: 65px auto 0; padding: clamp(25px, 5vw, 48px); border: 1px solid #d7ddaf; border-radius: 22px; background: #fffef9c9; }
+.radio-archive-heading { display: grid; grid-template-columns: 1fr 150px; gap: 24px; align-items: center; }
+.radio-archive-heading h3 { margin: 0; color: #456438; font: 500 clamp(28px, 3vw, 38px)/1.4 var(--serif); letter-spacing: .05em; }
+.radio-archive-heading > div:first-child > p:last-child { margin: 7px 0 0; color: #71835b; font-size: 14px; }
+.radio-art-small { width: 150px; aspect-ratio: 1; justify-self: end; border-radius: 18px; }
+.radio-archive-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 27px; }
+.radio-archive-card { display: flex; min-height: 218px; flex-direction: column; align-items: flex-start; padding: 26px; border: 1px solid #d4ddb1; border-radius: 15px; background: linear-gradient(145deg, #f7f6df, #fffdf6); color: #47613a; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.radio-archive-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px #53683b1f; }
+.radio-card-label { color: #aa9143; font-size: 12px; letter-spacing: .13em; }
+.radio-archive-card strong { margin: 11px 0 9px; font: 500 23px/1.45 var(--serif); }
+.radio-archive-card small { color: #70805d; font-size: 13px; line-height: 1.75; }
+.radio-archive-card .radio-card-action { margin-top: auto; padding: 7px 14px; font-size: 12px; }
+@media(max-width:700px){.radio-intro{grid-template-columns:1fr;gap:28px}.radio-art-main{max-width:330px}.radio-copy{text-align:center;margin:auto}.radio-copy > p:not(.overline){font-size:15px}.radio-archive{margin-top:46px;padding:22px 18px}.radio-archive-heading{grid-template-columns:1fr 100px;gap:14px}.radio-art-small{width:100px;border-radius:14px}.radio-archive-heading > div:first-child > p:last-child{font-size:13px}.radio-archive-grid{grid-template-columns:1fr}.radio-archive-card{min-height:190px;padding:22px}.radio-archive-card strong{font-size:21px}}

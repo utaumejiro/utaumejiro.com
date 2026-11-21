@@ -73,6 +73,26 @@ document.querySelectorAll('.play').forEach((button) => {
 });
 const musicHeading = document.querySelector('.music .title-center');
 if (musicHeading) musicHeading.insertAdjacentHTML('beforeend', '<a class="platform-link" href="https://suno.com/@utau_mejiro" target="_blank" rel="noopener noreferrer">Suno で楽曲を聴く ↗</a>');
+
+const radioChannel = 'https://www.youtube.com/@sylvan_friends';
+const radioVideos = 'https://www.youtube.com/@sylvan_friends/videos';
+const radioSearch = 'https://www.youtube.com/@sylvan_friends/search?query=%E3%83%81%E3%83%A5%E3%83%AB%E3%83%83%E3%81%A8%E3%83%A9%E3%82%B8%E3%82%AA';
+const musicSection = document.querySelector('.music');
+if (musicSection) musicSection.insertAdjacentHTML('afterend', `<section class="radio section" id="radio" aria-labelledby="radio-title">
+  <div class="radio-intro">
+    <div class="radio-art radio-art-main"><img src="assets/radio/churutto-radio-cover.png" alt="チュルッとラジオのメジロちゃんイラスト"></div>
+    <div class="radio-copy"><p class="overline">CHURUTTO RADIO</p><h2 id="radio-title">チュルッと<br><em>ラジオ</em></h2><p>メジロちゃんが、歌や森のこと、日々の小さなおしゃべりをお届けするYouTubeラジオです。ゆったりした時間を、いっしょに過ごしてね。</p><a class="radio-channel-link" href="${radioChannel}" target="_blank" rel="noopener noreferrer">YouTube チャンネルを開く</a></div>
+  </div>
+  <div class="radio-archive">
+    <div class="radio-archive-heading"><div><p class="overline">ARCHIVE</p><h3>過去回アーカイブ</h3><p>各回を新しい順にたどれます。気になる回をYouTubeでお楽しみください。</p></div><div class="radio-art radio-art-small"><img src="assets/radio/churutto-radio-archive.png" alt="チュルッとラジオのアーカイブ用イラスト" loading="lazy"></div></div>
+    <div class="radio-archive-grid">
+      <a class="radio-archive-card" href="${radioVideos}" target="_blank" rel="noopener noreferrer"><span class="radio-card-label">ALL EPISODES</span><strong>チュルッとラジオ<br>アーカイブ一覧</strong><small>動画タブから、最新回〜過去回を順番にご覧いただけます。</small><span class="radio-card-action">動画一覧を見る</span></a>
+      <a class="radio-archive-card" href="${radioSearch}" target="_blank" rel="noopener noreferrer"><span class="radio-card-label">SEARCH</span><strong>タイトルから<br>過去回を探す</strong><small>「チュルッとラジオ」の動画だけを検索して、見たい回へ。</small><span class="radio-card-action">ラジオ回を検索</span></a>
+    </div>
+  </div>
+</section>`);
+document.querySelector('.header nav')?.insertAdjacentHTML('beforeend', '<a href="#radio">Radio</a>');
+document.querySelector('.hero-buttons')?.insertAdjacentHTML('beforeend', '<a href="#radio">📻 Radio</a>');
 const goodsGrid = document.querySelector('.goods-grid');
 if (goodsGrid) goodsGrid.innerHTML = '<article class="suzuri-card"><i>🛍</i><div><h3>SUZURI のメジロちゃんグッズ</h3><p>メジロちゃんのグッズは、SUZURIのショップでご覧いただけます。<br>新しいアイテムも、ここからチェックしてね。</p></div><a href="https://suzuri.jp/utau_mejiro" target="_blank" rel="noopener noreferrer">SUZURI ショップへ ↗</a></article><article class="stamp-card"><i>💬</i><div><p class="card-label">NOW ON SALE</p><h3>メジロちゃん LINEスタンプ</h3><p>森から届く、やさしいひとこと。メジロちゃんのLINEスタンプを販売中です。</p></div><a href="https://store.line.me/stickershop/product/35247520/ja" target="_blank" rel="noopener noreferrer">LINEスタンプを購入 ↗</a></article>';
 
