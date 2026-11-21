@@ -36,6 +36,8 @@
 .radio-copy h2 { font-size: clamp(40px, 5vw, 62px); }
 .radio-copy > p:not(.overline) { margin: 18px 0 23px; font-size: 16px; line-height: 2; }
 .radio-copy .radio-schedule { margin: 0 0 23px; color: #4f743d; font-weight: 700; }
+.radio-copy .radio-schedule small { font-size: 13px; font-weight: 500; }
+.radio-person-link { color: #456d36; text-decoration-color: #b69e55; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .radio-gather { display: inline-block; margin-bottom: 4px; color: #8c6b20; font: 500 clamp(20px, 2.5vw, 26px)/1.5 var(--serif); letter-spacing: .05em; }
 .radio-channel-link, .radio-card-action { display: inline-block; border-radius: 999px; background: #527a3e; color: #fff; padding: 10px 19px; text-decoration: none; font-size: 14px; letter-spacing: .05em; }
 .radio-archive { max-width: 1030px; margin: 65px auto 0; padding: clamp(25px, 5vw, 48px); border: 1px solid #d7ddaf; border-radius: 22px; background: #fffef9c9; }
