@@ -57,7 +57,10 @@ const places = { '紫陽花の小道':'雨あがりには、紫陽花の色が�
 document.querySelectorAll('.map button').forEach((button) => button.addEventListener('click', () => document.querySelector('#world-message').textContent = places[button.dataset.world]));
 
 const sunoProfile = 'https://suno.com/@utau_mejiro';
-document.querySelector('.official-movie')?.setAttribute('href', 'https://www.youtube.com/@うたうめじろ');
+const youtubeChannel = 'https://www.youtube.com/@うたうめじろ';
+const publishedVideos = ['クリームソーダ・サマー', '曖昧ハロウィン', '曖昧ハロウィン（もうひとつの世界線）'];
+const officialMovie = document.querySelector('.official-movie');
+if (officialMovie) officialMovie.outerHTML = `<div class="music-videos" aria-label="Official Movie"><p class="overline">OFFICIAL MOVIE</p><div class="music-video-grid">${publishedVideos.map((title, index) => `<a href="${youtubeChannel}/search?query=${encodeURIComponent(title)}" target="_blank" rel="noopener noreferrer"><span>MOVIE ${String(index + 1).padStart(2, '0')}</span><strong>${title}</strong><small>YouTubeで見る</small></a>`).join('')}</div></div>`;
 const featuredSongs = ['クリームソーダ・サマー', 'めじろ音頭〜チュルッと夏まつり！〜', 'ことり会議', '曖昧ハロウィン'];
 const musicGrid = document.querySelector('.song-grid');
 if (musicGrid) musicGrid.innerHTML = featuredSongs.map((song, index) => `<article><b>${String(index + 1).padStart(2, '0')}</b><h3>${song}</h3><a class="play" href="${sunoProfile}" target="_blank" rel="noopener noreferrer">Suno で聴く ↗</a></article>`).join('');
