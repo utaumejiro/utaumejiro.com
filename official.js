@@ -58,21 +58,13 @@ document.querySelectorAll('.map button').forEach((button) => button.addEventList
 
 const sunoProfile = 'https://suno.com/@utau_mejiro';
 document.querySelector('.official-movie')?.setAttribute('href', 'https://www.youtube.com/@うたうめじろ');
-const featuredSongs = ['ことり会議', '若葉色モノローグ', 'さえずりのない夜', 'めじろ音頭〜チュルッと夏まつり！〜', 'クリームソーダ・サマー'];
-document.querySelectorAll('.song-grid article').forEach((card, index) => {
-  if (featuredSongs[index]) card.querySelector('h3').textContent = featuredSongs[index];
-});
-document.querySelectorAll('.play').forEach((button) => {
-  const link = document.createElement('a');
-  link.href = sunoProfile;
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  link.className = 'play';
-  link.textContent = 'Suno で聴く ↗';
-  button.replaceWith(link);
-});
+const featuredSongs = ['クリームソーダ・サマー', 'めじろ音頭〜チュルッと夏まつり！〜', 'ことり会議', '曖昧ハロウィン'];
+const musicGrid = document.querySelector('.song-grid');
+if (musicGrid) musicGrid.innerHTML = featuredSongs.map((song, index) => `<article><b>${String(index + 1).padStart(2, '0')}</b><h3>${song}</h3><a class="play" href="${sunoProfile}" target="_blank" rel="noopener noreferrer">Suno で聴く ↗</a></article>`).join('');
 const musicHeading = document.querySelector('.music .title-center');
 if (musicHeading) musicHeading.insertAdjacentHTML('beforeend', '<a class="platform-link" href="https://suno.com/@utau_mejiro" target="_blank" rel="noopener noreferrer">Suno で楽曲を聴く ↗</a>');
+const musicNote = document.querySelector('.music-note');
+if (musicNote) musicNote.insertAdjacentHTML('beforebegin', `<div class="playlist-picks"><div class="playlist-heading"><p class="overline">RECOMMENDED PLAYLISTS</p><h3>おすすめプレイリスト</h3></div><div class="playlist-grid"><a href="${sunoProfile}" target="_blank" rel="noopener noreferrer"><span>PLAYLIST 01</span><strong>2026夏　お披露目曲</strong><small>Sunoで聴く</small></a><a href="${sunoProfile}" target="_blank" rel="noopener noreferrer"><span>PLAYLIST 02</span><strong>勝手にめじろ音頭カバー祭り</strong><small>Sunoで聴く</small></a></div></div>`);
 
 const radioChannel = 'https://www.youtube.com/@sylvan_friends';
 const radioVideos = 'https://www.youtube.com/@sylvan_friends/videos';

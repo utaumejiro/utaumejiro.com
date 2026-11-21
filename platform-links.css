@@ -2,6 +2,16 @@
 .music .platform-link { margin-top: 14px; }
 .official-movie { text-decoration: none; transition: transform .2s ease, filter .2s ease; }
 .official-movie:hover { transform: translateY(-3px); filter: brightness(1.07); }
+.playlist-picks { max-width: 930px; margin: 44px auto 24px; padding-top: 30px; border-top: 1px solid #b8c994; }
+.playlist-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 14px; }
+.playlist-heading .overline { margin: 0; }
+.playlist-heading h3 { margin: 0; color: #456b37; font: 500 22px var(--serif); }
+.playlist-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.playlist-grid a { min-height: 132px; padding: 20px 23px; display: flex; flex-direction: column; justify-content: space-between; background: #fffdf0b8; border: 1px solid #fff; color: #456b37; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.playlist-grid a:hover { transform: translateY(-3px); box-shadow: 0 10px 24px #456b3720; }
+.playlist-grid span, .playlist-grid small { color: #7a965a; font-size: 11px; letter-spacing: .1em; }
+.playlist-grid strong { font: 500 19px/1.5 var(--serif); }
+@media (max-width: 640px) { .playlist-heading { align-items: flex-start; flex-direction: column; gap: 4px; } .playlist-grid { grid-template-columns: 1fr; } }
 .goods .suzuri-card, .goods .stamp-card { grid-column: 1 / -1; display: grid; grid-template-columns: 105px 1fr auto; gap: 25px; align-items: center; text-align: left; padding: 28px 40px; background: #ffffff1e; }
 .goods .suzuri-card i, .goods .stamp-card i { text-align: center; font-size: 50px; }
 .goods .suzuri-card h3, .goods .stamp-card h3 { margin: 0 0 5px; }
