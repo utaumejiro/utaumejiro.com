@@ -121,12 +121,26 @@ sectionNumbers.forEach(([selector, label]) => {
 const gallery = document.querySelector('.masonry');
 if (gallery) gallery.insertAdjacentHTML('beforeend', '<figure class="scene"><img src="assets/gallery/waffle-with-friends.png" alt="ワッフルを楽しむメジロちゃんとおともだち"><figcaption><b>ワッフルの時間</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/rainy-day-friends.png" alt="雨宿りするメジロちゃんとおともだち"><figcaption><b>雨の日のよりみち</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/flower-shop-friends.png" alt="花屋さんのメジロちゃんとおともだち"><figcaption><b>花屋さんの午後</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/watermelon-friends.png" alt="スイカを楽しむメジロちゃんとおともだち"><figcaption><b>すいか日和</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/monja-friends.png" alt="もんじゃ焼きを楽しむメジロちゃんとおともだち"><figcaption><b>もんじゃ焼きパーティー</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/sunflower-friends.png" alt="ひまわり畑のメジロちゃんとおともだち"><figcaption><b>ひまわりの小道</b><span>2026.08.06</span></figcaption></figure><figure class="scene"><img src="assets/gallery/beach-mochi.png" alt="海辺でおもちちゃんと遊ぶメジロちゃん"><figcaption><b>海辺のおもちちゃん</b><span>2026.08.06</span></figcaption></figure>');
 
+const newGalleryWorks = [
+  ['winter-snow-dress.png', '雪の中で微笑む白いドレスのメジロちゃん', '雪のきらめき'], ['woodland-rhythm.png', '森で歌うちびメジロちゃん', '森のリズム'], ['sunlit-dance.png', '木漏れ日の森で踊るちびメジロちゃん', '木漏れ日のダンス'],
+  ['winter-hexagon-sheet.png', '六角形のひみつ衣装のキャラクターシート', '六角形のひみつ'], ['christmas-sheet.png', 'クリスマス衣装のキャラクターシート', 'クリスマス衣装'], ['autumn-festival-sheet.png', '灯りの秋まつり衣装のキャラクターシート', '灯りの秋まつり'], ['summer-outing-sheet.png', '夏のおでかけワンピースのキャラクターシート', '夏のおでかけワンピース'],
+  ['museum-afternoon.png', '美術館で絵画を見るメジロちゃん', '美術館の午後'], ['flower-town.png', '花屋さんの小道を歩くメジロちゃん', '花屋さんの小道'], ['pizza-hot.png', 'ピッツァを楽しむメジロちゃん', 'あちあちピッツァ'], ['starry-restaurant.png', '星空のレストランにいるメジロちゃん', '星空レストラン'],
+  ['ferris-wheel-sunset.png', '夕暮れの観覧車に乗るメジロちゃん', '夕暮れの観覧車'], ['red-dress-night.png', '赤いドレスで踊るメジロちゃん', '赤いドレスの夜'], ['pizza-with-friends.png', 'おともだちとピッツァを楽しむメジロちゃん', 'みんなでピッツァ'],
+  ['train-outing.png', '電車でおでかけするメジロちゃん', '小さなおでかけ'], ['harbor-trip.png', '港町を旅するメジロちゃん', '港町の旅'], ['goodnight-time.png', 'おやすみ前にパソコンを使うメジロちゃん', 'おやすみ前の時間'],
+];
+if (gallery) gallery.insertAdjacentHTML('beforeend', newGalleryWorks.map(([file, alt, title]) => `<figure class="scene"><img src="assets/gallery/seasonal/${file}" alt="${alt}"><figcaption><b>${title}</b><span>NEW</span></figcaption></figure>`).join(''));
+
 if (gallery) {
   const scenes = [
     { title: '紫陽花の季節', copy: '雨あがりの小道で、ゆっくり深呼吸。', works: ['紫陽花の小道', '白い紫陽花', 'あじさい散歩', '紫陽花浴衣', '浴衣スタイル・スケッチ'] },
     { title: '森のひみつ', copy: '羽根のきらめきと、守護鳥に出会う物語。', works: ['森の歌姫', '守護鳥の祝福', 'ネラダイナーの冒険', '花かんむりの午後', '羽根衣装・スケッチ'] },
     { title: '夏のきらめき', copy: '海、ひまわり、そして甘いクリームソーダ。', works: ['夏のステージ', 'チェリーパイ・タイム', 'クリームソーダをどうぞ', '夏の海辺で', 'すいか日和', 'ひまわりの小道', '海辺のおもちちゃん', '夏のステージ・スケッチ'] },
     { title: 'おともだちとの時間', copy: 'おしゃべりして、笑って、今日も思い出が増えていく。', works: ['るーと森の約束', '乾杯のひととき', 'ワッフルの時間', '雨の日のよりみち', '花屋さんの午後', 'もんじゃ焼きパーティー'] },
+    { title: '冬のきらめき', copy: '雪の結晶と、白い季節のとっておき。', works: ['雪のきらめき', '森のリズム', '木漏れ日のダンス'] },
+    { title: '新しい衣装コレクション', copy: '季節を彩る、4つの装いの設定画。', works: ['六角形のひみつ', 'クリスマス衣装', '灯りの秋まつり', '夏のおでかけワンピース'] },
+    { title: '街角のおでかけ', copy: '美術館、花屋さん、電車と港町へ。', works: ['美術館の午後', '花屋さんの小道', '小さなおでかけ', '港町の旅'] },
+    { title: '灯りのレストラン', copy: 'あたたかな夜と、おいしい時間。', works: ['あちあちピッツァ', '星空レストラン', '夕暮れの観覧車', '赤いドレスの夜', 'みんなでピッツァ'] },
+    { title: 'おやすみ前の時間', copy: '眠る前の、静かなひととき。', works: ['おやすみ前の時間'] },
   ];
   const figures = [...gallery.querySelectorAll('figure')];
   const byTitle = new Map(figures.map((figure) => [figure.querySelector('figcaption b')?.textContent, figure]));
@@ -155,7 +169,7 @@ if (gallery) {
   ];
   const sheetAlbum = document.createElement('section');
   sheetAlbum.className = 'gallery-scene character-sheet-album';
-  sheetAlbum.innerHTML = '<div class="scene-heading"><span>SCENE 05</span><div><h3>キャラクターシート・アルバム</h3><p>衣装やデザインの細部まで楽しめる、メジロちゃんの設定画集。</p></div></div><div class="character-sheet-groups"></div>';
+  sheetAlbum.innerHTML = '<div class="scene-heading"><span>SCENE 10</span><div><h3>キャラクターシート・アルバム</h3><p>衣装やデザインの細部まで楽しめる、メジロちゃんの設定画集。</p></div></div><div class="character-sheet-groups"></div>';
   const sheetGroups = sheetAlbum.querySelector('.character-sheet-groups');
   characterSheetGroups.forEach(({ title, copy, sheets }) => {
     const group = document.createElement('section');
